@@ -1,0 +1,24 @@
+# Maven build output — never commit compiled classes
+target/
+
+# Eclipse project files — machine specific
+.classpath
+.project
+.settings/
+.factorypath
+
+# Screenshots — generated at runtime, not source code
+src/test/resources/screenshots/*.png
+
+# Extent Reports — generated at runtime
+test-output/
+
+# Logs — generated at runtime
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# TestNG output
+test-output/

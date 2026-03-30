@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Suite" verbose="1" parallel="methods" thread-count="2">
+
+    <!-- Register our listener — enables reports + screenshots on failure -->
+    <listeners>
+        <listener class-name="com.saucedemo.automation.listeners.TestListener"/>
+    </listeners>
+
+    <!-- Pass browser and headless as parameters to BaseTest -->
+    <parameter name="browser"  value="chrome"/>
+    <parameter name="headless" value="false"/>
+
+    <test name="Login Tests">
+        <classes>
+            <class name="com.saucedemo.automation.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="E2E Checkout Tests">
+        <classes>
+            <class name="com.saucedemo.automation.tests.E2ECheckoutTest"/>
+        </classes>
+    </test>
+
+</suite>
